@@ -201,6 +201,11 @@
 }
 
 @media (max-width: 768px) {
+    .grid_1_up {
+        padding: 90px 50px;
+        align-items: center;
+        text-align: center;
+    }
 
     .grid_1_mid {
         padding: 90px 50px;
