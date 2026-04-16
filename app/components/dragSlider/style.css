@@ -1,0 +1,33 @@
+.sliderWrapper {
+  width: 100%;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.sliderWrapper:active {
+  cursor: grabbing;
+}
+
+.sliderTrack {
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  padding: 20px;
+}
+
+.sliderTrack::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  min-width: 200px;
+  height: 400px;
+  background: #222;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  flex-shrink: 0;
+}

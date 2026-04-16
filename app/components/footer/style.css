@@ -1,0 +1,174 @@
+.footer_all {
+    width: 100%;
+    padding: 100px 200px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    color: white;
+
+    .footer_up {
+        display: flex;
+        justify-content: space-between;
+
+        h1 {
+            font-size: 42px;
+            font-weight: 500;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            position: relative;
+
+
+            input {
+                width: 350px;
+                height: 70px;
+                padding-left: 50px;
+                border-radius: 40px;
+                background-color: #1A1A1A;
+                color: black;
+                font-weight: 600;
+                font-size: 12px;
+                border: none;
+                outline: none;
+                transition: all 0.4s ease;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+
+                &::placeholder {
+                    color: gray;
+                    font-weight: 700;
+                }
+
+                &:focus {
+                    background-color: white;
+                }
+
+                &:hover {
+                    background-color: white;
+                }
+            }
+
+            .footer_arrow_icon {
+                position: absolute;
+                right: 15px;
+                color: orange;
+                background-color: transparent;
+                border-radius: 50%;
+                font-size: 42px;
+                transition: all 0.4s ease;
+                cursor: pointer;
+                outline: none;
+                border: none;
+
+                &:hover {
+                    font-size: 50px;
+                    color: #FFC000;
+                }
+            }
+        }
+
+        .footer_link {
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 28px;
+            transition: all 0.4s ease;
+
+            &.active {
+                color: orange;
+            }
+
+            &:not(.active):hover {
+                color: orange;
+                transform: translateX(10px);
+            }
+        }
+
+        h4 {
+            color: #4B4B4B;
+            cursor: pointer;
+            font-weight: 300;
+            transition: all 0.4s ease;
+
+            &:hover {
+                color: white;
+                transform: translateX(5px);
+            }
+        }
+
+        h5 {
+            color: #666666;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    .footer_down {
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+
+        .footer_down_item {
+            margin: 0 20px;
+            height: 130px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .footer_social {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+
+                .footer_social_icon {
+                    font-size: 20px;
+                }
+            }
+
+            h3 {
+                font-weight: 500;
+            }
+        }
+
+        p {
+            color: #575757;
+            line-height: 1.5;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer_all {
+        padding: 100px 50px;
+        height: auto;
+    }
+
+    .footer_up {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer_down {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .footer_social {
+        justify-content: center;
+    }
+}

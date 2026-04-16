@@ -1,0 +1,127 @@
+.project_4_all {
+    background-color: white;
+}
+
+.project_4_up {
+    padding: 90px 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    h1 {
+        font-size: 74px;
+        font-weight: 500;
+
+        span {
+            font-weight: 100;
+        }
+    }
+
+    button {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+
+        &:hover {
+            .project_3_up_icon {
+                font-size: 44px;
+            }
+        }
+
+        p {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .project_4_up_icon {
+            font-size: 40px;
+            color: #e5e5e5;
+            border-radius: 50%;
+            background-color: black;
+            transition: all 0.4s ease;
+        }
+    }
+}
+
+.project_4_mid {
+    padding: 90px 200px;
+
+
+    .project_4_mid_2 {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            padding-top: 50px;
+            font-weight: 500;
+            font-size: 42px;
+        }
+
+        p {
+            width: 80%;
+            padding: 50px 0;
+            color: #9F9F9F;
+        }
+    }
+}
+
+.project_mid_down {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e5e5e5;
+
+    p {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: #3F3F3F;
+    }
+
+    .project_flex_link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &:hover {
+            .project_link_icon {
+                font-size: 44px;
+            }
+        }
+    }
+
+    .project_link_icon {
+        font-size: 40px;
+        color: #e5e5e5;
+        background-color: black;
+        border-radius: 50%;
+        transition: all 0.4s ease;
+    }
+}
+
+@media(max-width: 1024px) {
+    .project_4_up {
+        padding: 90px 50px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project_4_mid {
+        padding: 90px 30px;
+    }
+
+    .project_4_all .contact_box_down {
+        padding: 120px 50px;
+
+        h2 {
+            font-size: 42px;
+        }
+    }
+}

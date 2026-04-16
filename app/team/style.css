@@ -1,0 +1,302 @@
+.team_all {
+    background-color: white;
+
+    .team_up {
+        padding: 90px 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 50px;
+
+        h1 {
+            font-size: 74px;
+            font-weight: 500;
+
+            span {
+                font-weight: 100;
+            }
+        }
+
+        button {
+            padding: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            border: none;
+            gap: 20px;
+            cursor: pointer;
+
+            &:hover {
+                .team_up_icon {
+                    font-size: 44px;
+                }
+            }
+        }
+
+        .team_up_icon {
+            font-size: 40px;
+            color: #E5E5E5;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            border-radius: 50%;
+            background-color: black;
+        }
+    }
+
+    .team_mid {
+        width: 100%;
+        padding: 90px 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .team_mid_box {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            transition: all 0.4s ease;
+        }
+
+        .h_4_img_div {
+            width: 230px;
+            height: 290px;
+            margin-bottom: 30px;
+            position: relative;
+
+            &:hover {
+                .h_4_img_hover_div {
+                    opacity: 0.8;
+                }
+
+                .h_4_hover_line {
+                    animation: h_4_hover_line 1s forwards;
+                }
+
+                .h_4_img_hover_div h2,
+                h3,
+                .h_4_social {
+                    animation: h_4_hover_transform 1s forwards ease;
+                }
+            }
+
+
+            .h_4_img_hover_div {
+                width: 230px;
+                height: 290px;
+                padding-top: 100px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                color: white;
+                background-color: #1A1A1A;
+                font-weight: 500;
+                opacity: 0;
+                transition: all 0.4s ease;
+
+
+                .h_4_social {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+
+                    .h_4_social_icon {
+                        cursor: pointer;
+                        font-size: 20px;
+                        transition: all 0.4s ease;
+
+                        &:hover {
+                            color: orange;
+                        }
+                    }
+                }
+
+                .h_4_hover_line {
+                    width: 0%;
+                    height: 5px;
+                    background-color: #FEA600;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+
+
+
+                .team_card_name {
+                    font-size: 20px;
+                    cursor: pointer;
+                    transition: all 0.4s ease;
+
+                    &:hover {
+                        color: orange;
+                    }
+                }
+
+                h3 {
+                    cursor: pointer;
+                    color: #666666;
+                    font-weight: 500;
+                    letter-spacing: 2px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+.h_4_right_2 {
+
+
+    p {
+        margin-bottom: 30px;
+        color: #AEAEAE;
+
+        span {
+            color: orange;
+        }
+    }
+}
+
+.team_down {
+    padding: 130px 200px;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+
+    h2 {
+        margin-top: 50px;
+        font-size: 68px;
+        font-weight: 500;
+        text-align: center;
+
+        span {
+            font-weight: 100;
+        }
+    }
+
+    .team_link {
+        width: 230px;
+        height: 70px;
+        padding: 15px 50px;
+        display: flex;
+        align-items: center;
+        background-color: orange;
+        border-radius: 40px;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+
+        &:hover {
+            .team_down_icon {
+                font-size: 44px;
+            }
+        }
+
+        .team_down_icon {
+            position: absolute;
+            right: 15px;
+            font-size: 40px;
+            transition: all 0.4s ease;
+        }
+    }
+
+
+    .team_down_position {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        color: #B2B2B2;
+
+        p {
+            width: 300px;
+            text-align: right;
+        }
+
+        span {
+            width: 400px;
+            height: 1px;
+            background-color: #e5e5e5;
+            margin-left: 20px;
+        }
+    }
+}
+
+@keyframes h_4_hover_transform {
+    from {
+        transform: translateY(20px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes h_4_hover_line {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .team_all .team_up {
+        padding: 90px 50px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .team_all .team_mid {
+        padding: 90px 50px;
+
+        .team_mid_box {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+
+        }
+    }
+}
+
+@media (max-width: 768px) {
+   .team_all .team_up h1 {
+        font-size: 50px;
+    }
+
+    .team_down {
+        padding: 100px 50px;
+
+        h2 {
+            font-size: 50px;
+        }
+    }
+
+    .team_down_position span {
+        display: none;
+    }
+}

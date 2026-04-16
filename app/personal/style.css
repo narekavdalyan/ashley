@@ -1,0 +1,134 @@
+.personal_all {
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E5E5;
+
+
+
+    .personal_img {
+        width: 440px;
+        height: 500px;
+        background-image: url(/assets/personal_1.png);
+        background-size: 110%;
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+
+    .personal_body {
+        width: 100%;
+        /* height: 100vh; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 250px;
+        position: relative;
+
+        .personal_body_head {
+            p {
+                margin-bottom: 50px;
+                color: gray;
+            }
+        }
+
+        h1 {
+            font-size: 74px;
+            font-weight: 600;
+        }
+    }
+
+    .personal_position {
+        width: 100%;
+        padding: 30px 0;
+        /* height: 200px; */
+        position: absolute;
+        bottom: 0;
+        background-color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        p {
+            color: gray;
+        }
+
+
+        .personal_actions {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .personal_social {
+            padding: 15px 50px;
+            background-color: #E5E5E5;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 20px;
+            height: 70px;
+
+            .personal_social_icon {
+                cursor: pointer;
+                transition: all 0.4s ease;
+
+                &:hover {
+                    color: #FEA600;
+                }
+            }
+        }
+
+
+        .personal_portfolio_btn {
+            height: 70px;
+            padding: 30px 50px;
+            background-color: orange;
+            border-radius: 35px;
+            border: none;
+            font-weight: bold;
+            font-size: 12px;
+            letter-spacing: 1.5;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #FEA600;
+
+                .head_arrow_icon {
+                    font-size: 44px;
+                }
+            }
+        }
+
+        .head_arrow_icon {
+            font-size: 40px;
+            position: absolute;
+            right: 15px;
+            transform: translateY(-50%);
+            transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .personal_body {
+        flex-direction: column;
+    }
+
+    .personal_position {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .personal_actions {
+        flex-direction: column;
+    }
+}

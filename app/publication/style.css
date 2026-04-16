@@ -1,0 +1,131 @@
+.publication_all {
+    background-color: white;
+
+    h1 {
+        padding: 130px 200px;
+        font-size: 68px;
+        font-weight: 500;
+        text-align: center;
+
+        span {
+            font-weight: 100;
+        }
+    }
+
+    .public_img_div {
+        padding: 90px 200px;
+
+        div {
+            padding: 50px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #e5e5e5;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+
+            span {
+                color: #7F7F7F;
+            }
+        }
+    }
+
+    .public_mid_justify {
+        padding: 10px 400px 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+
+        .mid_p1 {
+            font-size: 22px;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+
+        .public_border_div {
+            width: 100%;
+            padding: 70px;
+            border-left: 4px solid orange;
+            background-color: #F1F1F1;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        h2 {
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        div p,
+        .mid_img_p,
+        .mid_bottom_p {
+            color: #808080;
+            font-weight: 200;
+            line-height: 1.5;
+        }
+
+        .public_mid_images {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+}
+
+.home_6_all {
+    background-color: #F2F2F2;
+}
+
+@media (max-width: 1200px) {
+    .publication_all .public_mid_justify {
+        padding: 50px 100px;
+    }
+
+    .home_6_all {
+        padding: 100px 50px;
+
+        .h_6_down .h_6_down_box {
+            height: auto;
+            gap: 20px;
+        }
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .publication_all {
+
+        h1 {
+            padding: 130px 50px;
+            font-size: 50px;
+        }
+
+        .public_img_div {
+            padding: 90px 50px;
+
+            div {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+        }
+
+        .public_mid_justify {
+            padding: 50px 100px;
+        }
+    }
+
+    .home_6_all .h_6_down {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .h_6_down_box {
+            width: 90%;
+        }
+    }
+
+}
