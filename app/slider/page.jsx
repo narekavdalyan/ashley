@@ -72,7 +72,19 @@ const Page = () => {
     const autoIntervalRef = useRef(null);
     const isTransitioningRef = useRef(false);
 
-    const slideWidth = 730;
+    const slideRef = useRef(null);
+    const [slideWidth, setSlideWidth] = useState(0);
+
+
+    useEffect(() => {
+        if (slideRef.current) {
+            const width = slideRef.current.offsetWidth + 30; // include gap
+            setSlideWidth(width);
+            setCurrentTranslate(-width);
+            prevTranslateRef.current = -width;
+        }
+    }, []);
+
     const totalSlides = originalItems.length;
 
     // Автопрокрутка
@@ -196,7 +208,7 @@ const Page = () => {
                         }}
                     >
                         {slider_items.map((item, index) => (
-                            <div key={index} style={{ minWidth: '800px', flexShrink: 0 }}>
+                            <div key={index} style={{ minWidth: '800px', flexShrink: 0 }} ref={index === 0 ? slideRef : null}>
                                 <img
                                     width={700}
                                     height={370}
