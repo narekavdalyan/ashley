@@ -34,7 +34,7 @@ export default function Home() {
         <main className="bg-black w-screen h-screen overflow-hidden home_1_bg">
             <Canvas
                 camera={{ position: [0, 0, 8], fov: 50 }}
-                style={{ background: 'transparent' }}
+                style={{ background: 'transparent', pointerEvents: 'none' }}
             >
                 <ambientLight intensity={0.5} />
                 <pointLight position={[10, 10, 10]} />
@@ -61,7 +61,7 @@ export function Home2() {
         <main className="bg-black w-screen h-screen overflow-hidden home_1_bg">
             <Canvas
                 camera={{ position: [0, 0, 8], fov: 50 }}
-                style={{ background: 'transparent' }}
+                style={{ background: 'transparent', pointerEvents: 'none' }}
             >
                 <ambientLight intensity={0.5} />
                 <pointLight position={[10, 10, 10]} />
