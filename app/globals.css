@@ -1010,7 +1010,7 @@ a {
     text-align: center;
   }
 
-  .home_2_all .home_4_left {
+  .home_4_all .home_4_left {
     width: 100%;
     align-items: center;
     text-align: center;
@@ -1021,7 +1021,7 @@ a {
     align-items: center;
   }
 
-  .home_2_all .h_6_down {
+  .home_6_all .h_6_down {
     flex-direction: column;
     align-items: center;
     text-align: center;
