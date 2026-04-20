@@ -1028,6 +1028,12 @@ a {
     gap: 40px;
   }
 
+  .home_6_all .home_6_up button {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
 
   .contact_box_down .contact_box_down_position span {
     display: none;
