@@ -1000,6 +1000,8 @@ a {
 
   .home_2_all .home_2_left {
     width: 100%;
+    align-items: center;
+    text-align: center;
   }
 
   .home_2_left_bottom {
