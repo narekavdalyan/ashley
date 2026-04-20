@@ -100,9 +100,8 @@ const Header = () => {
     ];
 
 
-
     return (
-        <div className='header_all'>
+        <div className={`header_all ${isMenuOpen && 'mobile_menu'}`}>
             <div className='header_up'>
                 <Link href={'/'} className='header_left_logo'>A.</Link>
                 <div className='header_menu_logo'

@@ -7,7 +7,7 @@ import { PersonalDodecahedron } from '../components/dodechedron/newBackground';
 const originalItems = [
     {
         id: 1,
-        src: '/next.svg',
+        src: 'assets/grid_1_2.jpg',
         category: 'TECHNOLOGY',
         date: '10 АПР 2026',
         title: 'Interior design studio',
@@ -15,7 +15,7 @@ const originalItems = [
     },
     {
         id: 2,
-        src: '/next.svg',
+        src: 'assets/grid_1_4.jpg',
         category: 'TECHNOLOGY',
         date: '10 АПР 2026',
         title: 'Home Security Camera',
@@ -23,7 +23,7 @@ const originalItems = [
     },
     {
         id: 3,
-        src: '/next.svg',
+        src: 'assets/grid_1_5.jpg',
         category: 'TECHNOLOGY',
         date: '10 АПР 2026',
         title: 'Kemia Honest Skincare',
@@ -31,7 +31,7 @@ const originalItems = [
     },
     {
         id: 4,
-        src: '/next.svg',
+        src: 'assets/grid_1_1.jpg',
         category: 'TECHNOLOGY',
         date: '10 АПР 2026',
         title: 'Cascade of Lava',
@@ -39,7 +39,7 @@ const originalItems = [
     },
     {
         id: 5,
-        src: '/next.svg',
+        src: 'assets/grid_1_3.jpg',
         category: 'TECHNOLOGY',
         date: '10 АПР 2026',
         title: 'Air Pro by Molekule',
@@ -47,7 +47,7 @@ const originalItems = [
     },
     {
         id: 6,
-        src: '/next.svg',
+        src: 'assets/grid_1_6.jpg',
         category: 'TECHNOLOGY',
         date: '10 АПР 2026',
         title: "Tony's Chockolonely",
@@ -72,19 +72,7 @@ const Page = () => {
     const autoIntervalRef = useRef(null);
     const isTransitioningRef = useRef(false);
 
-    const slideRef = useRef(null);
-    const [slideWidth, setSlideWidth] = useState(0);
-
-
-    useEffect(() => {
-        if (slideRef.current) {
-            const width = slideRef.current.offsetWidth + 30; // include gap
-            setSlideWidth(width);
-            setCurrentTranslate(-width);
-            prevTranslateRef.current = -width;
-        }
-    }, []);
-
+    const slideWidth = 730;
     const totalSlides = originalItems.length;
 
     // Автопрокрутка
@@ -103,7 +91,6 @@ const Page = () => {
     const handleMouseEnter = () => clearInterval(autoIntervalRef.current);
     const handleMouseLeave = () => startAutoSlide();
 
-    // Следующий слайд
     const nextSlide = () => {
         if (isTransitioningRef.current) return;
         isTransitioningRef.current = true;
@@ -146,6 +133,7 @@ const Page = () => {
             isTransitioningRef.current = false;
         }, 450);
     };
+
     // Drag & Touch
     const handleStart = (clientX) => {
         if (isTransitioningRef.current) return;
@@ -187,6 +175,7 @@ const Page = () => {
             onMouseLeave={handleMouseLeave}
         >
             <PersonalDodecahedron />
+
             <div className="slider_up">
                 <div
                     className='wrapper'
@@ -208,7 +197,7 @@ const Page = () => {
                         }}
                     >
                         {slider_items.map((item, index) => (
-                            <div key={index} style={{ minWidth: '800px', flexShrink: 0 }} ref={index === 0 ? slideRef : null}>
+                            <div key={index} style={{ minWidth: '700px', maxHeight:'400px', flexShrink: 0 }}>
                                 <img
                                     width={700}
                                     height={370}
@@ -256,7 +245,7 @@ const Page = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

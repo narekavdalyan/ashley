@@ -63,7 +63,7 @@ a {
   cursor: pointer;
   transition: all 0.4s ease;
   mix-blend-mode: difference;
-  /* background-color: transparent; */
+
   color: white;
 
   &.show {
@@ -105,7 +105,7 @@ a {
 }
 
 .home_1_all {
-  /* height: 100vh; */
+
   background-color: black;
   color: white;
 
@@ -259,6 +259,7 @@ a {
   display: flex;
   justify-content: space-between;
   gap: 30px;
+  background-color: white;
 }
 
 .home_2_left {
@@ -332,7 +333,7 @@ a {
 
 
 .home_3_all {
-  /* height: 1000px; */
+
   padding-bottom: 0;
   display: flex;
   flex-direction: column;
@@ -724,7 +725,7 @@ a {
     padding: 60px 0;
     display: flex;
     justify-content: space-evenly;
-    /* gap: 10px; */
+
 
     .h_5_team_img_div:nth-child(2n) {
       transform: translateY(20px);
@@ -829,13 +830,13 @@ a {
   }
 }
 
-.slider {
+.home_slider {
   margin-top: 50px;
   overflow: hidden;
   width: 100%;
 }
 
-.slider_track {
+.home_slider_track {
   display: flex;
   width: max-content;
   animation: scrollLeft 15s linear infinite;
@@ -987,11 +988,7 @@ a {
 
 
 
-/* 
-  max-width: 480px, 768px,
-  min-width: 768px, max-width: 1024px,
-  min-width: 1024px, max-width: 1200px,
-/* ----------------------------- media max 768 -------------------------- */
+
 @media (max-width: 768px) {
   .home_1_all h1 {
     font-size: 50px;
@@ -999,6 +996,10 @@ a {
 
   .home_2_all h1 {
     font-size: 50px;
+  }
+
+  .home_2_left {
+    width: 100%;
   }
 
   .home_2_left_bottom {
@@ -1019,7 +1020,7 @@ a {
 }
 
 
-/* ----------------------------- media max 1024 -------------------------- */
+
 
 @media (max-width: 1024px) {
   .home_section {

@@ -346,8 +346,8 @@ export default function Home() {
         </div>
 
 
-        <div className="slider">
-          <div className="slider_track">
+        <div className="home_slider">
+          <div className="home_slider_track">
             {[...images, ...images].map((item, i) => (
               <div className="slide" key={i}>
                 <img src={item} alt="" />
