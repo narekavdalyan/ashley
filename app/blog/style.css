@@ -87,7 +87,6 @@
         &:hover {
             .h_6_arrow_icon {
                 font-size: 44px;
-
             }
         }
     }
@@ -408,5 +407,18 @@
 
     .service_down_position span {
         display: none;
+    }
+
+    .home_6_all .h_6_arrow_icon {
+        position: static;
+        margin: 10px;
+    }
+
+    .home_6_all .h_6_down .h_6_down_box {
+        padding: 20px 0;
+    }
+
+    .services_down h2 {
+        font-size: 36px;
     }
 }

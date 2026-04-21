@@ -118,6 +118,8 @@
     align-items: center;
     gap: 50px;
     position: relative;
+    background-color: #F2F2F2;
+   
 
     h2 {
         margin-top: 50px;

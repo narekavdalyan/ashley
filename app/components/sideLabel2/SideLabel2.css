@@ -1,0 +1,46 @@
+
+
+.scroll_to_top_position {
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transform: rotate(-90deg);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  mix-blend-mode: difference;
+
+  color: white;
+
+  &.show {
+    opacity: 1;
+    mix-blend-mode: difference;
+  }
+
+  &.hide {
+    mix-blend-mode: difference;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:hover {
+    .scroll_top_arrow_icon {
+      font-size: 44px;
+    }
+  }
+
+}
+
+.scroll_top_arrow_icon {
+  font-size: 40px;
+  color: #E5E5E5;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+
+
+}

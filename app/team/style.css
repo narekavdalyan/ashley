@@ -299,4 +299,12 @@
     .team_down_position span {
         display: none;
     }
+
+   .team_all .team_mid .h_4_img_div {
+    width: 80%;
+
+    .h_4_img_hover_div {
+        width: 100%;
+    }
+   }
 }

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import { FaCircleArrowDown } from "react-icons/fa6";
 import { FaCirclePause } from "react-icons/fa6";

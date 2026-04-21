@@ -36,7 +36,8 @@ const SideLabel2 = ({ section1Ref }) => {
         <div
             onClick={() => {
                 document.getElementById('home_1_section').scrollIntoView({ behavior: 'smooth' })
-            }} className={`scroll_to_top_position ${showScrollTop ? 'show' : 'hide'}`}>
+            }}
+            className={`scroll_to_top_position ${showScrollTop ? 'show' : 'hide'}`}>
             <p>BACK TO TOP</p>
             <BsFillArrowRightCircleFill className="scroll_top_arrow_icon" />
         </div>
