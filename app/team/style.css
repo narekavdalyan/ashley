@@ -285,14 +285,14 @@
 
 @media (max-width: 768px) {
    .team_all .team_up h1 {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .team_down {
         padding: 100px 50px;
 
         h2 {
-            font-size: 50px;
+            font-size: 36px;
         }
     }
 

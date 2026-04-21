@@ -104,7 +104,7 @@
         }
 
         .public_img_div {
-            padding: 90px 50px;
+            padding: 50px;
 
             div {
                 flex-direction: column;
@@ -114,7 +114,7 @@
         }
 
         .public_mid_justify {
-            padding: 50px 100px;
+            padding: 50px 50px;
         }
     }
 
@@ -124,8 +124,22 @@
         text-align: center;
 
         .h_6_down_box {
-            width: 90%;
+            width: 100%;
+            align-items: center;
+
+            button {
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .h_6_arrow_icon {
+                 position: static;
+            }
         }
     }
+
+  
 
 }

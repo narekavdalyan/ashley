@@ -295,6 +295,19 @@
 }
 
 @media (max-width: 768px) {
+
+    .services_up {
+        padding: 90px 50px;
+
+        h1 {
+            font-size: 42px;
+        }
+
+        button {
+            margin: 10px 0;
+        }
+    }
+
     .services_down {
         padding: 90px 50px;
 

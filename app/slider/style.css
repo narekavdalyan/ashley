@@ -136,3 +136,19 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .slider_all {
+        padding: 90px 40px;
+    }
+
+    .slider_down {
+        flex-direction: column;
+        align-items: center;
+
+        .slider_down_left {
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+}
