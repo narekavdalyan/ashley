@@ -6,46 +6,48 @@ import Link from 'next/link'
 import { FaCircleArrowDown } from "react-icons/fa6";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import SideLabel2 from '../components/sideLabel2/SideLabel2';
+import { useTranslation } from 'react-i18next';
 
 
 const page = () => {
+    const {t, i18n} = useTranslation();
 
     const all_categories = [
         
         {
             id: 1,
-            span: 'ART',
-            date: 'APR 08 2026',
-            title: 'Color Psychology in Art and Design',
-            subTitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat',
-            btn_text: 'READ MORE',
+            span: `${t('blog.all_categories.item_1.span')}`,
+            date: `${t('blog.all_categories.item_1.date')}`,
+            title: `${t('blog.all_categories.item_1.title')}`,
+            subTitle: `${t('blog.all_categories.item_1.subTitle')}`,
+            btn_text: `${t('blog.all_categories.item_1.btn_text')}`,
             src: 'assets/categories_2.jpg'
         },
         {
             id: 2,
-            span: 'TECHNOLOGY',
-            date: 'APR 08 2026',
-            title: 'How to Create a Brand Guide for Your Client',
-            subTitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat',
-            btn_text: 'READ MORE',
+            span: `${t('blog.all_categories.item_2.span')}`,
+            date: `${t('blog.all_categories.item_2.date')}`,
+            title: `${t('blog.all_categories.item_2.title')}`,
+            subTitle: `${t('blog.all_categories.item_2.subTitle')}`,
+            btn_text: `${t('blog.all_categories.item_2.btn_text')}`,
             src: 'assets/categories_1.jpg'
         },
         {
             id: 3,
-            span: 'DESIGN',
-            date: 'APR 08 2026',
-            title: 'How to Design a Repeating Pattern',
-            subTitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat',
-            btn_text: 'READ MORE',
+             span: `${t('blog.all_categories.item_3.span')}`,
+            date: `${t('blog.all_categories.item_3.date')}`,
+            title: `${t('blog.all_categories.item_3.title')}`,
+            subTitle: `${t('blog.all_categories.item_3.subTitle')}`,
+            btn_text: `${t('blog.all_categories.item_3.btn_text')}`,
             src: 'assets/categories_3.jpg'
         },
         {
             id: 4,
-            span: 'CODE',
-            date: 'APR 08 2026',
-            title: 'How to Never Reach Creative Burnout',
-            subTitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat',
-            btn_text: 'READ MORE',
+            span: `${t('blog.all_categories.item_4.span')}`,
+            date: `${t('blog.all_categories.item_4.date')}`,
+            title: `${t('blog.all_categories.item_4.title')}`,
+            subTitle: `${t('blog.all_categories.item_4.subTitle')}`,
+            btn_text: `${t('blog.all_categories.item_4.btn_text')}`,
             src: 'assets/categories_4.jpg'
         },
     ]
@@ -55,11 +57,11 @@ const page = () => {
     const filteredCategories = activeCategory === 'ALL CATEGORIES' ? all_categories : all_categories.filter((item) => (item.span === activeCategory))
 
     const nav_items = [
-        { id: 1, name: 'DESIGN' },
-        { id: 2, name: 'ART' },
-        { id: 3, name: 'CODE' },
-        { id: 4, name: 'TECHNOLOGY' },
-        { id: 5, name: 'ALL CATEGORIES' }
+        { id: 1, name: `${t('blog.nav_1_name')}` },
+        { id: 2, name: `${t('blog.nav_2_name')}` },
+        { id: 3, name: `${t('blog.nav_3_name')}` },
+        { id: 4, name: `${t('blog.nav_4_name')}` },
+        { id: 5, name: `${t('blog.nav_5_name')}` }
     ];
 
     const [isClickedId, setIsclickedId] = useState(null)
@@ -71,12 +73,12 @@ const page = () => {
             <PersonalDodecahedron />
             <div ref={section1Ref}  id='home_1_section' className='blog_up'>
                 <h1>
-                    Exploring <span>the World</span> <br />
-                    Through Our <span>Blog</span>
+                    {t('blog.title.1')} <span>{t('blog.title.2')}</span> <br />
+                    {t('blog.title.3')} <span>{t('blog.title.4')}</span>
                 </h1>
 
                 <div onClick={() => { document.getElementById('grid_1_mid').scrollIntoView({ behavior: 'smooth' }) }}>
-                    <p>OUR WORKS</p>
+                    <p>{t('blog.up_btn')}</p>
                     <FaCircleArrowDown className='blog_up_icon' />
                 </div>
             </div>
@@ -85,10 +87,10 @@ const page = () => {
 
             <section className="home_6_all home_section">
                 <div className="h_6_up">
-                    <h2>Popular Publications:</h2>
+                    <h2>{t('blog.popular.title')}</h2>
 
                     <button>
-                        <p>VIEW ALL</p>
+                        <p>{t('blog.popular.btn')}</p>
                         <div> <FaCircleArrowRight className="h_6_arrow_icon" /></div>
                     </button>
                 </div>
@@ -96,28 +98,26 @@ const page = () => {
                 <div className="h_6_down">
                     <div className="h_6_down_box">
                         <img src="assets/home_6_1.jpg" alt="" width={'100%'} height={300} />
-                        <p className="h_6_p1"><span>TECHNOLOGY</span> MAY 24 2023</p>
-                        <h2>How to Become a Graphic Designer in 10 Simple Steps</h2>
+                        <p className="h_6_p1"><span>{t('blog.popular.item_category')}</span> {t('blog.popular.item_date')}</p>
+                        <h2>{t('blog.popular.item_1_title')}</h2>
                         <p className="h_6_p2">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae,
-                            eos necessitatibus nisi. Nam cupiditate...
+                           {t('blog.popular.item_desc')}
                         </p>
                         <button>
-                            <p>READ MORE</p>
+                            <p>{t('blog.popular.item_btn')}</p>
                             <div> <FaCircleArrowRight className="h_6_arrow_icon" /></div>
                         </button>
                     </div>
 
                     <div className="h_6_down_box">
                         <img src="assets/home_6_2.jpg" alt="" width={'100%'} height={300} />
-                        <p className="h_6_p1"><span>TECHNOLOGY</span> MAY 24 2023</p>
-                        <h2>16 Best Graphic Design Online and Offline Courses</h2>
+                        <p className="h_6_p1"><span>{t('blog.popular.item_category')}</span> {t('blog.popular.item_date')}</p>
+                        <h2>{t('blog.popular.item_2_title')}</h2>
                         <p className="h_6_p2">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae,
-                            eos necessitatibus nisi. Nam cupiditate...
+                           {t('blog.popular.item_desc')}
                         </p>
                         <button>
-                            <p>READ MORE</p>
+                            <p>{t('blog.popular.item_btn')}</p>
                             <div> <FaCircleArrowRight className="h_6_arrow_icon" /></div>
                         </button>
                     </div>
@@ -126,7 +126,7 @@ const page = () => {
 
             <div className='blog_categories'>
                 <div className='categories_header'>
-                    <h2>Categpries:</h2>
+                    <h2>{t('blog.popular.categories')}</h2>
                     <nav>
                         {
                             nav_items.map((item) => (
@@ -146,7 +146,6 @@ const page = () => {
                     filteredCategories.map((box) => (
                         <div key={box.id} className='blog_box'>
                             <img width={'450px'} height={'300px'} src={box.src} alt='Category img'></img>
-
                             <div className='blog_box_right'>
                                 <h3><span>{box.span}</span> <p>{box.date}</p> </h3>
                                 <h2>{box.title}</h2>
@@ -161,27 +160,21 @@ const page = () => {
                 }
             </div>
 
-
             <div className='services_down'>
                 <div className='service_down_position'>
-                    <p>Looking to make your mark? We'll help you turn yourr project into a success sotry.</p>
+                    <p>{t('blog.down.text')}</p>
                     <span></span>
                 </div>
-
                 <h2>
-                    Stay up-to-date <span>with the</span> <br />
-                    latest news by <span>subscribing</span> <br />
-                    to our <span>newsletter!</span>
+                    {t('blog.down.title.1')} <span>{t('blog.down.title.2')}</span> <br />
+                    {t('blog.down.title.3')} <span>{t('blog.down.title.4')}</span> <br />
+                    {t('blog.down.title.5')} <span>{t('blog.down.title.6')}</span>
                 </h2>
-
                 <div className='blog_input_div'>
-                    <input type="text" placeholder='ENTER YOUR EMAIL' />
+                    <input type="text" placeholder={t('blog.down.placeholder')} />
                     <Link href={'/contact'} ><FaCircleArrowRight className='blog_down_icon' /></Link>
                 </div>
-
-
             </div>
-
         </div>
     )
 }

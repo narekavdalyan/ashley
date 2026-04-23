@@ -4,18 +4,22 @@ import React, { useRef } from 'react'
 import { FaCircleArrowDown } from "react-icons/fa6";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import SideLabel2 from '../components/sideLabel2/SideLabel2';
+import { useTranslation } from 'react-i18next';
 
 
 const page = () => {
+    const {t, i18n} = useTranslation();
 
     const section1Ref = useRef(null);
 
     return (
         <div className='contact_all'>
             <div ref={section1Ref} id='home_1_section' className='contact_up'>
-                <h1>Get in touch</h1>
-                <button>
-                    <p>SEND MESSAGE</p>
+                <h1>{t('contact.title')}</h1>
+                <button onClick={() => {
+                    document.getElementById('contact_body').scrollIntoView({behavior:"smooth"})
+                }}>
+                    <p>{t('contact.up_btn')}</p>
                     <FaCircleArrowDown className='contact_icon' />
                 </button>
             </div>
@@ -35,19 +39,19 @@ const page = () => {
             </div>
              <SideLabel2 section1Ref={section1Ref} />
 
-            <div className='contact_down'>
-                <h2>Let's <span>Talk</span></h2>
+            <div id='contact_body' className='contact_down'>
+                <h2>{t('contact.down.title_1')} <span>{t('contact.down.title_2')}</span></h2>
                 <form action="">
                     <div className='contact_inputs_div'>
-                        <input type="text" placeholder="WHAT'S YOUR NAME" />
-                        <input type="email" placeholder='YOUR EMAIL' />
+                        <input type="text" placeholder={t('contact.down.placeholder_1')} />
+                        <input type="email" placeholder={t('contact.down.placeholder_2')} />
                     </div>
 
-                    <textarea name="message" placeholder="TELL US ABOUT YOUR PROJECT"></textarea>
+                    <textarea name="message" placeholder={t('contact.down.placeholder_3')}></textarea>
                     <div className='contact_btn_div'>
-                        <p><span>*</span> We promise not to disclose your personal information to third parties.</p>
+                        <p><span>*</span> {t('contact.down.text')}</p>
                         <button type="submit">
-                            <p>SEND MESSAGE</p>
+                            <p>{t('contact.down.btn')}</p>
                             <FaCircleArrowRight className='contact_icon' />
                         </button>
                     </div>
