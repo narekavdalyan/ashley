@@ -1,3 +1,4 @@
+'use client'
 
 import Dodechedron from "../components/dodechedron/newBackground";
 import { PersonalDodecahedron } from "../components/dodechedron/newBackground";
@@ -9,23 +10,25 @@ import { FaDribbble } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaCircleArrowRight } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 
 
 const page = () => {
+    const {t, i18n} = useTranslation();
     return (
         <main className="personal_all">
             <PersonalDodecahedron />
 
             <div className="personal_body">
                 <div className="personal_body_head">
-                    <p>Hello! My name is</p>
-                    <h1>Ashley <br /> Goodman</h1>
+                    <p>{t('personal.up_text')}</p>
+                    <h1>{t('personal.name')} <br /> {t('personal.surname')}</h1>
                 </div>
 
                 <div className="personal_img"></div>
 
                 <div className="personal_position">
-                    <p>Designing a Better World Today</p>
+                    <p>{t('personal.down_text')}</p>
 
                     <div className="personal_actions">
 
@@ -37,7 +40,7 @@ const page = () => {
                         </div>
 
                         <button className="personal_portfolio_btn">
-                            <Link href={'/slider'}><div>VIEW PORTFOLIO</div></Link>
+                            <Link href={'/slider'}><div>{t('personal.btn')}</div></Link>
                             <div> <FaCircleArrowRight className="head_arrow_icon" /></div>
                         </button>
                     </div>

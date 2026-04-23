@@ -3,66 +3,69 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FaCircleArrowRight, FaCircleArrowLeft } from "react-icons/fa6";
 import { PersonalDodecahedron } from '../components/dodechedron/newBackground';
+import { useTranslation } from 'react-i18next';
 
-const originalItems = [
-    {
-        id: 1,
-        src: 'assets/grid_1_2.jpg',
-        category: 'TECHNOLOGY',
-        date: '10 АПР 2026',
-        title: 'Interior design studio',
-        btn_text: 'ПОСМОТРЕТЬ ПРОЕКТ'
-    },
-    {
-        id: 2,
-        src: 'assets/grid_1_4.jpg',
-        category: 'TECHNOLOGY',
-        date: '10 АПР 2026',
-        title: 'Home Security Camera',
-        btn_text: 'ПОСМОТРЕТЬ ПРОЕКТ'
-    },
-    {
-        id: 3,
-        src: 'assets/grid_1_5.jpg',
-        category: 'TECHNOLOGY',
-        date: '10 АПР 2026',
-        title: 'Kemia Honest Skincare',
-        btn_text: 'ПОСМОТРЕТЬ ПРОЕКТ'
-    },
-    {
-        id: 4,
-        src: 'assets/grid_1_1.jpg',
-        category: 'TECHNOLOGY',
-        date: '10 АПР 2026',
-        title: 'Cascade of Lava',
-        btn_text: 'ПОСМОТРЕТЬ ПРОЕКТ'
-    },
-    {
-        id: 5,
-        src: 'assets/grid_1_3.jpg',
-        category: 'TECHNOLOGY',
-        date: '10 АПР 2026',
-        title: 'Air Pro by Molekule',
-        btn_text: 'ПОСМОТРЕТЬ ПРОЕКТ'
-    },
-    {
-        id: 6,
-        src: 'assets/grid_1_6.jpg',
-        category: 'TECHNOLOGY',
-        date: '10 АПР 2026',
-        title: "Tony's Chockolonely",
-        btn_text: 'ПОСМОТРЕТЬ ПРОЕКТ'
-    }
-];
-
-// Бесконечный массив: последний + оригинальные + первый
-const slider_items = [
-    originalItems[originalItems.length - 1],
-    ...originalItems,
-    originalItems[0]
-];
 
 const Page = () => {
+
+    const { t, i18n } = useTranslation();
+
+    const originalItems = [
+        {
+            id: 1,
+            src: 'assets/grid_1_2.jpg',
+            category: `${t('slider.category')}`,
+            date: `${t('slider.date')}`,
+            title: `${t('slider.title_1')}`,
+            btn_text: `${t('slider.btn_text')}`
+        },
+        {
+            id: 2,
+            src: 'assets/grid_1_4.jpg',
+            category: `${t('slider.category')}`,
+            date: `${t('slider.date')}`,
+            title: `${t('slider.title_2')}`,
+            btn_text: `${t('slider.btn_text')}`
+        },
+        {
+            id: 3,
+            src: 'assets/grid_1_5.jpg',
+            category: `${t('slider.category')}`,
+            date: `${t('slider.date')}`,
+            title: `${t('slider.title_3')}`,
+            btn_text: `${t('slider.btn_text')}`
+        },
+        {
+            id: 4,
+            src: 'assets/grid_1_1.jpg',
+            category: `${t('slider.category')}`,
+            date: `${t('slider.date')}`,
+            title: `${t('slider.title_4')}`,
+            btn_text: `${t('slider.btn_text')}`
+        },
+        {
+            id: 5,
+            src: 'assets/grid_1_3.jpg',
+            category: `${t('slider.category')}`,
+            date: `${t('slider.date')}`,
+            title: `${t('slider.title_5')}`,
+            btn_text: `${t('slider.btn_text')}`
+        },
+        {
+            id: 6,
+            src: 'assets/grid_1_6.jpg',
+            category: `${t('slider.category')}`,
+            date: `${t('slider.date')}`,
+            title: `${t('slider.title_6')}`,
+            btn_text: `${t('slider.btn_text')}`
+        }
+    ];
+    // Бесконечный массив: последний + оригинальные + первый
+    const slider_items = [
+        originalItems[originalItems.length - 1],
+        ...originalItems,
+        originalItems[0]
+    ];
     const [position, setPosition] = useState(1);           // начинаем с первого реального слайда
     const [isDragging, setIsDragging] = useState(false);
     const [currentTranslate, setCurrentTranslate] = useState(-730);
@@ -197,7 +200,7 @@ const Page = () => {
                         }}
                     >
                         {slider_items.map((item, index) => (
-                            <div key={index} style={{ minWidth: '700px', maxHeight:'400px', flexShrink: 0 }}>
+                            <div key={index} style={{ minWidth: '700px', maxHeight: '400px', flexShrink: 0 }}>
                                 <img
                                     width={700}
                                     height={370}

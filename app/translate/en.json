@@ -115,12 +115,221 @@
                 "desc": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate...",
                 "btn": "READ MORE"
             },
-             "box_2": {
+            "box_2": {
                 "category": "TECHNOLOGY",
                 "date": "MAY 24 2023",
                 "title": "16 Best Graphic Design Online and Offline Courses",
                 "desc": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate...",
                 "btn": "READ MORE"
+            }
+        }
+    },
+    "personal": {
+        "up_text": "Hello! my name is",
+        "name": "Ashley",
+        "surname": "Goodman",
+        "down_text": "Designing a Better World Today",
+        "btn": "VIEW PORTFOLIO"
+    },
+    "slider": {
+        "category": "TECHNOLOGY",
+        "date": "MAY 24 2023",
+        "btn_text": "VIEW PORTFOLIO",
+        "title_1": "Interior design studio",
+        "title_2": "Home Security Camera",
+        "title_3": "Kemia Honest Skincare",
+        "title_4": "Cascade of Lava",
+        "title_5": "Air Pro by Molekule",
+        "title_6": "Tony's Chockolonely"
+    },
+    "grid_1": {
+        "title_1": "Designing a",
+        "title_2": "Better",
+        "title_3": "World Today",
+        "up_text": "OUR WORKS",
+        "item_1": {
+            "desc": "BRANDING",
+            "date": "MAY 24 2023",
+            "title": "Interior design studio"
+        },
+        "item_2": {
+            "desc": "DESIGN",
+            "date": "MAY 24 2023",
+            "title": "Kemia Honest Skincare"
+        },
+        "item_3": {
+            "desc": "DESIGN",
+            "date": "MAY 24 2023",
+            "title": "Air Pro by Molekule"
+        },
+        "item_4": {
+            "desc": "DESIGN",
+            "date": "MAY 24 2023",
+            "title": "Home Security Camera"
+        },
+        "item_5": {
+            "desc": "PHOTOGRAPHY",
+            "date": "MAY 24 2023",
+            "title": "Cascade of Lava"
+        },
+        "item_6": {
+            "desc": "DESIGN",
+            "date": "MAY 24 2023",
+            "title": "Tony's chocolonely"
+        },
+        "down": {
+            "text": "Looking to make your mark? We'll help you turn your project into a success story.",
+            "title": {
+                "1": "Ready to bring your",
+                "2": "ideas",
+                "3": "to life?",
+                "4": "We're ",
+                "5": "here to help"
+            },
+            "btn": "CONTACT US"
+        }
+    },
+    "services": {
+        "title": {
+            "1": "This is",
+            "2": "what",
+            "3": "we do",
+            "4": "best"
+        },
+        "up_text": "OUR SERVICES",
+        "ul": {
+            "li_1": "UX AUDITS",
+            "li_2": "DESIGN THINKING",
+            "li_3": "METHODOLOGIES",
+            "li_4": "WIREFRAMING"
+        },
+        "item_desc": " Our creative agency specializes in creating unique brand identities that resonate with your target audience.",
+        "item_btn": "READ MORE",
+        "item_1": {
+            "title_1": "Branding and ",
+            "title_2": "Identify Design"
+        },
+        "item_2": {
+            "title_1": "Website Design ",
+            "title_2": "and Development"
+        },
+        "item_3": {
+            "title_1": "Advertising and ",
+            "title_2": "Marketing Compaigns"
+        },
+        "item_4": {
+            "title_1": "Creative Consulting ",
+            "title_2": "Concept Development"
+        },
+        "down": {
+            "text": "Looking to make your mark? We'll help you turn your project into a success story.",
+            "title": {
+                "1": "Let's make an",
+                "2": "impact",
+                "3": "together. Ready",
+                "4": "when you are"
+            },
+            "btn": "CONTACT US"
+        }
+    },
+    "single": {
+        "up_items": {
+            "item_1": {
+                "title": "UX AUDITS",
+                "desc": "A UX audit is a service that evaluates the user experience (UX) of a website. It involves analyzing the  websites design, functionality, and content to identify areas of improvement that can enhance the users overall experience.During a UX audit, a team of UX experts will conduct a thorough review of the website and provide a comprehensive report that outlines specific recommendations for improving the websites usability, accessibility, and overall user experience.The audit may cover various aspects of the website, such as navigation, layout, visual design, content structure, and mobile responsiveness.The goal is to identify any pain points or obstacles that users may encounter while browsing the website and provide actionable recommendations to improve their experience.In summary, a UX audit can help website owners identify areas of improvement that can enhance their websites user experience and increase user engagement and satisfaction"
+            },
+            "item_2": {
+                "title": "DESIGN THINKING",
+                "desc": "Design thinking is a problem-solving approach that emphasizes empathy, creativity, and collaboration. It involves understanding the needs and perspectives of users, identifying and defining the problem, generating multiple possible solutions, prototyping and testing those solutions, and iterating based on feedback. Design thinking encourages a human-centered approach to innovation and is often used in fields such as product design, user experience (UX) design, and business strategy to create user-centric and innovative solutions. It promotes a mindset that embraces experimentation, iteration, and continuous learning throughout the design process."
+            },
+            "item_3": {
+                "title": "WIREFRAMING",
+                "desc": "Wireframing is a vital step in web design where a visual representation of a websites structure is created. It focuses on layout and user experience, using basic shapes and lines to outline elements like headers, menus, and content sections. Wireframes establish the websites architecture and functionality, facilitating communication between designers, developers, and clients. They serve as a blueprint for user-friendly websites, setting the foundation for design and development"
+            },
+            "item_4": {
+                "title": "AESTHETICS",
+                "desc": "Aesthetics in web design focus on the visual appeal of a website, incorporating elements like colors, typography, images, and layout. It aims to create an engaging and visually pleasing user experience that reflects the brand identity and purpose of the website. A well-designed aesthetic balances visual appeal with functionality, leaving a lasting impression on users"
+            },
+            "item_5": {
+                "title": "METHODOLOGIES",
+                "desc": "Libero quam alias tempora facilis necessitatibus quis officiis voluptatem architecto harum exercitationem quidem illum eligendi. Veniam non vitae, nemo dolor tempora, necessitatibus enim sapiente quam voluptas architecto minima omnis sequi aperiam aliquam vel quo reprehenderit, tempore tenetur. Architecto dolorem assumenda voluptas, odio nemo vero illo praesentium pariatur, ut perspiciatis, est itaque minus ratione vitae laboriosam molestiae"
+            }
+        },
+        "title": {
+            "1": "Website",
+            "2": "Design",
+            "3": "and",
+            "4": "Development"
+        },
+        "up_btn": "ABOUT SERVICE",
+        "title_2": {
+            "1": "Your",
+            "2": "Approach",
+            "3": "and",
+            "4": "Work Specifics"
+        },
+        "up_desc": "At our agency, we have a unique approach to web design and development. We believe in creating websites that not only look great but also perform well in terms of user experience, functionality, and search engine optimization.",
+        "up_left_btn": "VIEW WORKS",
+        "mid_up": {
+            "title": {
+                "1": "Reasonable",
+                "2": "prices",
+                "3": "for innovative",
+                "4": "solutions"
+            },
+            "desc": {
+                "1": "At our agency, we have a unique approach to web design and development.",
+                "2": "We believe in creating in terms of user experience, functionality."
+            }
+        },
+        "mid_body": {
+            "item_desc_1": "Tomlo commodi, mollitia atque betae esse itaque a,",
+            "item_desc_2": "voluptatibus, suscipit beatae afficiis amnis.",
+            "item_1": {
+                "title_1": "Tailored Designs for",
+                "title_2": "Every Budget"
+            },
+            "item_2": {
+                "title_1": "Inspiring and Customized",
+                "title_2": "Design Solutions"
+            },
+            "item_3": {
+                "title_1": "Unleashing the Beauty of Space",
+                "title_2": "with Unique Designs"
+            },
+            "item_4": {
+                "title_1": "Exquisite Design Concepts",
+                "title_2": "for Discerning Clients"
+            }
+        },
+        "mid_btn": "INDIVIDUAL SOLUTION",
+        "down": {
+            "title": "Other services",
+            "up_btn": "VIEW ALL",
+            "item_btn": "READ MORE",
+            "item_1": {
+                "title": "Branding and Identity Design",
+                "desc": "Our creative agency is a team of professionals focused on helping your brand grow.",
+                "li_1": "UX AUDITS",
+                "li_2": "DESIGN THINKING",
+                "li_3": "METHODOLOGIES",
+                "li_4": "WIREFRAMING"
+            },
+            "item_2": {
+                "title": "Advertising and Marketing",
+                "desc": "Our creative agency is a team of professionals focused on helping your brand grow.",
+                "li_1": "UX AUDITS",
+                "li_2": "DESIGN THINKING",
+                "li_3": "METHODOLOGIES",
+                "li_4": "WIREFRAMING"
+            },
+            "item_3": {
+                "title": "Creative Consulting",
+                "desc": "Our creative agency is a team of professionals focused on helping your brand grow.",
+                "li_1": "UX AUDITS",
+                "li_2": "DESIGN THINKING",
+                "li_3": "METHODOLOGIES",
+                "li_4": "WIREFRAMING"
             }
         }
     }

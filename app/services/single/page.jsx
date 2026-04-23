@@ -10,38 +10,39 @@ import './style.css'
 import { useState } from 'react';
 import Link from 'next/link';
 import SideLabel2 from '@/app/components/sideLabel2/SideLabel2';
+import { useTranslation } from 'react-i18next';
 
 
 
 const page = () => {
-
+    const { t, i18n } = useTranslation();
     const section1Ref = useRef(null);
 
     const up_items = [
         {
             id: 1,
-            title: 'UX AUDITS',
-            desc: 'A UX audit is a service that evaluates the user experience (UX) of a website. It involves analyzing the  websites design, functionality, and content to identify areas of improvement that can enhance the users overall experience.During a UX audit, a team of UX experts will conduct a thorough review of the website and provide a comprehensive report that outlines specific recommendations for improving the websites usability, accessibility, and overall user experience.The audit may cover various aspects of the website, such as navigation, layout, visual design, content structure, and mobile responsiveness.The goal is to identify any pain points or obstacles that users may encounter while browsing the website and provide actionable recommendations to improve their experience.In summary, a UX audit can help website owners identify areas of improvement that can enhance their websites user experience and increase user engagement and satisfaction'
+            title: `${t('single.up_items.item_1.title')}`,
+            desc: `${t('single.up_items.item_1.desc')}`
         },
         {
             id: 2,
-            title: 'DESIGN THINKING',
-            desc: 'Design thinking is a problem-solving approach that emphasizes empathy, creativity, and collaboration. It involves understanding the needs and perspectives of users, identifying and defining the problem, generating multiple possible solutions, prototyping and testing those solutions, and iterating based on feedback. Design thinking encourages a human-centered approach to innovation and is often used in fields such as product design, user experience (UX) design, and business strategy to create user-centric and innovative solutions. It promotes a mindset that embraces experimentation, iteration, and continuous learning throughout the design process.'
+            title: `${t('single.up_items.item_2.title')}`,
+            desc: `${t('single.up_items.item_2.desc')}`
         },
         {
             id: 3,
-            title: 'WIREFRAMING',
-            desc: 'Wireframing is a vital step in web design where a visual representation of a websites structure is created. It focuses on layout and user experience, using basic shapes and lines to outline elements like headers, menus, and content sections. Wireframes establish the websites architecture and functionality, facilitating communication between designers, developers, and clients. They serve as a blueprint for user-friendly websites, setting the foundation for design and development'
+            title: `${t('single.up_items.item_3.title')}`,
+            desc: `${t('single.up_items.item_3.desc')}`
         },
         {
             id: 4,
-            title: 'AESTHETICS',
-            desc: 'Aesthetics in web design focus on the visual appeal of a website, incorporating elements like colors, typography, images, and layout. It aims to create an engaging and visually pleasing user experience that reflects the brand identity and purpose of the website. A well-designed aesthetic balances visual appeal with functionality, leaving a lasting impression on users'
+            title: `${t('single.up_items.item_4.title')}`,
+            desc: `${t('single.up_items.item_4.desc')}`
         },
         {
             id: 5,
-            title: 'METHODOLOGIES',
-            desc: 'Libero quam alias tempora facilis necessitatibus quis officiis voluptatem architecto harum exercitationem quidem illum eligendi. Veniam non vitae, nemo dolor tempora, necessitatibus enim sapiente quam voluptas architecto minima omnis sequi aperiam aliquam vel quo reprehenderit, tempore tenetur. Architecto dolorem assumenda voluptas, odio nemo vero illo praesentium pariatur, ut perspiciatis, est itaque minus ratione vitae laboriosam molestiae'
+            title: `${t('single.up_items.item_5.title')}`,
+            desc: `${t('single.up_items.item_5.desc')}`
         }
 
     ]
@@ -58,12 +59,12 @@ const page = () => {
             <div ref={section1Ref} id='home_1_section' className='single_service_up'>
                 <div className='single_up_1'>
                     <h2>
-                        Website <span>Design</span> <br />
-                        and <span>Development</span>
+                        {t('single.title.1')} <span>{t('single.title.2')}</span> <br />
+                        {t('single.title.3')} <span>{t('single.title.4')}</span>
                     </h2>
 
                     <div onClick={() => { document.getElementById('service_details').scrollIntoView({ behavior: 'smooth' }) }}>
-                        <p>ABOUT SERVICE</p>
+                        <p>{t('single.up_btn')}</p>
                         <FaCircleArrowDown className='single_up_icon' />
                     </div>
                 </div>
@@ -71,16 +72,14 @@ const page = () => {
                 <div id='service_details' className='single_up_2'>
                     <div className='single_up_2_left'>
                         <h2>
-                            Your <span>Approach</span> <br />
-                            and <span>Work Specifics</span>
+                            {t('single.title_2.1')}  <span>{t('single.title_2.2')} </span> <br />
+                            {t('single.title_2.3')}  <span>{t('single.title_2.4')} </span>
                         </h2>
 
-                        <p>
-                            At our agency, we have a unique approach to web design and development. We believe in creating websites that not only look great but also perform well in terms of user experience, functionality, and search engine optimization.
-                        </p>
+                        <p>{t('single.up_desc')}</p>
 
                         <div>
-                            <p className='single_up_left_btn'>VIEW WORKS</p>
+                            <p className='single_up_left_btn'>{t('single.up_left_btn')}</p>
                             <FaCircleArrowRight className='single_up_icon' />
                         </div>
                     </div>
@@ -112,13 +111,13 @@ const page = () => {
             <div className='single_service_mid'>
                 <div className='single_mid_up'>
                     <h1>
-                        Reasonable <span>prices</span> <br />
-                        for innovative <span>solutions</span>
+                        {t('single.mid_up.title.1')} <span>{t('single.mid_up.title.2')}</span> <br />
+                        {t('single.mid_up.title.3')} <span>{t('single.mid_up.title.4')}</span>
                     </h1>
 
                     <p>
-                        At our agency, we have a unique approach to web design and development. <br />
-                        We believe in creating in terms of user experience, functionality.
+                        {t('single.mid_up.desc.1')} <br />
+                        {t('single.mid_up.desc.2')}
                     </p>
                 </div>
 
@@ -127,12 +126,12 @@ const page = () => {
                         <h2>
                             <span>$</span>19
                         </h2>
-                        <h3>Tailored Designs for <br />
-                            Every Budget
+                        <h3> {t('single.mid_body.item_1.title_1')} <br />
+                            {t('single.mid_body.item_1.title_2')}
                         </h3>
                         <p>
-                            Tomlo commodi, mollitia atque betae esse itaque a, <br />
-                            voluptatibus, suscipit beatae afficiis amnis.
+                            {t('single.mid_body.item_desc_1')} <br />
+                            {t('single.mid_body.item_desc_2')}
                         </p>
 
                         <FaCircleArrowRight className='single_mid_body_btn' />
@@ -143,12 +142,12 @@ const page = () => {
                             <span>$</span>29
                         </h2>
                         <h3>
-                            Inspiring and Customized <br />
-                            Design Solutions
+                            {t('single.mid_body.item_2.title_1')} <br />
+                            {t('single.mid_body.item_2.title_2')}
                         </h3>
                         <p>
-                            Tomlo commodi, mollitia atque betae esse itaque a, <br />
-                            voluptatibus, suscipit beatae afficiis amnis.
+                            {t('single.mid_body.item_desc_1')} <br />
+                            {t('single.mid_body.item_desc_2')}
                         </p>
 
                         <FaCircleArrowRight className='single_mid_body_btn' />
@@ -159,12 +158,12 @@ const page = () => {
                             <span>$</span>49
                         </h2>
                         <h3>
-                            Unleashing the Beauty of Space <br />
-                            with Unique Designs
+                            {t('single.mid_body.item_3.title_1')} <br />
+                            {t('single.mid_body.item_3.title_2')}
                         </h3>
                         <p>
-                            Tomlo commodi, mollitia atque betae esse itaque a, <br />
-                            voluptatibus, suscipit beatae afficiis amnis.
+                            {t('single.mid_body.item_desc_1')} <br />
+                            {t('single.mid_body.item_desc_2')}
                         </p>
 
                         <FaCircleArrowRight className='single_mid_body_btn' />
@@ -174,13 +173,13 @@ const page = () => {
                         <h2>
                             <span>$</span>199
                         </h2>
-                        <h3>
-                            Exquisite Design Concepts <br />
-                            for Discerning Clients
+                       <h3>
+                            {t('single.mid_body.item_4.title_1')} <br />
+                            {t('single.mid_body.item_4.title_2')}
                         </h3>
                         <p>
-                            Tomlo commodi, mollitia atque betae esse itaque a, <br />
-                            voluptatibus, suscipit beatae afficiis amnis.
+                            {t('single.mid_body.item_desc_1')} <br />
+                            {t('single.mid_body.item_desc_2')}
                         </p>
 
                         <FaCircleArrowRight className='single_mid_body_btn' />
@@ -188,7 +187,7 @@ const page = () => {
                 </Link>
 
                 <Link href={'/contact'} className='single_mid_bottom_btn'>
-                    INDIVIDUAL SOLUTION
+                    {t('single.mid_btn')}
                     <FaCircleArrowRight className='single_mid_body_icon' />
                 </Link>
 
@@ -197,60 +196,60 @@ const page = () => {
             <div className='single_service_down'>
                 <div className='single_down_head'>
                     <h2>
-                        Other services
+                        {t('single.down.title')}
                     </h2>
 
                     <button>
-                        <p>VIEW ALL</p>
+                        <p>{t('single.down.up_btn')}</p>
                         <FaCircleArrowRight className='single_down_icon' />
                     </button>
                 </div>
 
                 <div className='single_down_container'>
                     <div className="single_down_item">
-                        <h3>Branding and Identity Design</h3>
-                        <p>Our creative agency is a team of professionals focused on helping your brand grow.</p>
+                        <h3>{t('single.down.item_1.title')}</h3>
+                        <p>{t('single.down.item_1.desc')}</p>
                         <ul>
-                            <li>UX AUDITS</li>
-                            <li>DESIGN THINKING</li>
-                            <li>METHODOLOGIES</li>
-                            <li>WIREFRAMING</li>
+                            <li>{t('single.down.item_1.li_1')}</li>
+                            <li>{t('single.down.item_1.li_2')}</li>
+                            <li>{t('single.down.item_1.li_3')}</li>
+                            <li>{t('single.down.item_1.li_4')}</li>
                         </ul>
 
                         <button>
-                            READ MORE
+                            {t('single.down.item_btn')}
                             <FaCircleArrowRight className='single_down_icon' />
                         </button>
                     </div>
 
                     <div className="single_down_item">
-                        <h3>Advertising and Marketing</h3>
-                        <p>Our creative agency is a team of professionals focused on helping your brand grow.</p>
+                        <h3>{t('single.down.item_2.title')}</h3>
+                        <p>{t('single.down.item_2.desc')}</p>
                         <ul>
-                            <li>UX AUDITS</li>
-                            <li>DESIGN THINKING</li>
-                            <li>METHODOLOGIES</li>
-                            <li>WIREFRAMING</li>
+                            <li>{t('single.down.item_2.li_1')}</li>
+                            <li>{t('single.down.item_2.li_2')}</li>
+                            <li>{t('single.down.item_2.li_3')}</li>
+                            <li>{t('single.down.item_2.li_4')}</li>
                         </ul>
 
                         <button>
-                            READ MORE
+                            {t('single.down.item_btn')}
                             <FaCircleArrowRight className='single_down_icon' />
                         </button>
                     </div>
 
                     <div className="single_down_item">
-                        <h3>Creative Consulting</h3>
-                        <p>Our creative agency is a team of professionals focused on helping your brand grow.</p>
+                        <h3>{t('single.down.item_3.title')}</h3>
+                        <p>{t('single.down.item_3.desc')}</p>
                         <ul>
-                            <li>UX AUDITS</li>
-                            <li>DESIGN THINKING</li>
-                            <li>METHODOLOGIES</li>
-                            <li>WIREFRAMING</li>
+                            <li>{t('single.down.item_3.li_1')}</li>
+                            <li>{t('single.down.item_3.li_2')}</li>
+                            <li>{t('single.down.item_3.li_3')}</li>
+                            <li>{t('single.down.item_3.li_4')}</li>
                         </ul>
 
                         <button>
-                            READ MORE
+                            {t('single.down.item_btn')}
                             <FaCircleArrowRight className='single_down_icon' />
                         </button>
                     </div>

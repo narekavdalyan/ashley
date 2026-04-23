@@ -6,9 +6,11 @@ import { FaCircleArrowDown } from "react-icons/fa6";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import { PersonalDodecahedron } from '../components/dodechedron/newBackground';
 import SideLabel2 from '../components/sideLabel2/SideLabel2';
+import { useTranslation } from 'react-i18next';
 
 
 const page = () => {
+    const {t, i18n} = useTranslation();
 
     const section1Ref = useRef(null);
 
@@ -17,12 +19,12 @@ const page = () => {
             <PersonalDodecahedron />
             <div ref={section1Ref} id='home_1_section' className='grid_1_up'>
                 <h1>
-                    Designing a <br />
-                    Better <span>World Today</span>
+                    {t('grid_1.title_1')} <br />
+                    {t('grid_1.title_2')} <span>{t('grid_1.title_3')}</span>
                 </h1>
 
                 <div onClick={() => { document.getElementById('grid_1_mid').scrollIntoView({ behavior: 'smooth' }) }}>
-                    <p>OUR WORKS</p>
+                    <p>{t('grid_1.up_text')}</p>
                     <FaCircleArrowDown className='grid_1_up_icon' />
                 </div>
             </div>
@@ -33,26 +35,26 @@ const page = () => {
                     <div className="grid_1_mid_item">
                         <img width={'100%'} height={'490px'} src='assets/grid_1_1.jpg' alt='grid 1 image'></img>
                         <div className='grid_1_item_desc'>
-                            <span>BRANDING</span>
-                            <p>MAY 24 2023</p>
+                            <span>{t('grid_1.item_1.desc')}</span>
+                            <p>{t('grid_1.item_1.date')}</p>
                         </div>
-                        <h2>Interior design studio</h2>
+                        <h2>{t('grid_1.item_1.title')}</h2>
                     </div>
                     <div className="grid_1_mid_item">
                         <img width={'100%'} height={'300px'} src='assets/grid_1_2.jpg' alt='grid 1 image'></img>
                         <div className='grid_1_item_desc'>
-                            <span>DESIGN</span>
-                            <p>MAY 24 2023</p>
+                            <span>{t('grid_1.item_2.desc')}</span>
+                            <p>{t('grid_1.item_2.date')}</p>
                         </div>
-                        <h2>Kemia Honest Skincare</h2>
+                        <h2>{t('grid_1.item_2.title')}</h2>
                     </div>
                     <div className="grid_1_mid_item">
                         <img width={'100%'} height={'490px'} src='assets/grid_1_3.jpg' alt='grid 1 image'></img>
                         <div className='grid_1_item_desc'>
-                            <span>DESIGN</span>
-                            <p>MAY 24 2023</p>
+                            <span>{t('grid_1.item_3.desc')}</span>
+                            <p>{t('grid_1.item_3.date')}</p>
                         </div>
-                        <h2>Air Pro by Molekule</h2>
+                        <h2>{t('grid_1.item_3.title')}</h2>
                     </div>
                 </div>
 
@@ -60,43 +62,43 @@ const page = () => {
                     <div className="grid_1_mid_item">
                         <img width={'100%'} height={'300px'} src='assets/grid_1_4.jpg' alt='grid 1 image'></img>
                         <div className='grid_1_item_desc'>
-                            <span>DESIGN</span>
-                            <p>MAY 24 2023</p>
+                            <span>{t('grid_1.item_4.desc')}</span>
+                            <p>{t('grid_1.item_4.date')}</p>
                         </div>
-                        <h2>Home Security Camera</h2>
+                        <h2>{t('grid_1.item_4.title')}</h2>
                     </div>
                     <div className="grid_1_mid_item">
                         <img width={'100%'} height={'490px'} src='assets/grid_1_5.jpg' alt='grid 1 image'></img>
                         <div className='grid_1_item_desc'>
-                            <span>PHOTOGRAPHY</span>
-                            <p>MAY 24 2023</p>
+                            <span>{t('grid_1.item_5.desc')}</span>
+                            <p>{t('grid_1.item_5.date')}</p>
                         </div>
-                        <h2>Cascade of Lava</h2>
+                        <h2>{t('grid_1.item_5.title')}</h2>
                     </div>
                     <div className="grid_1_mid_item">
                         <img width={'100%'} height={'300px'} src='assets/grid_1_6.jpg' alt='grid 1 image'></img>
                         <div className='grid_1_item_desc'>
-                            <span>DESIGN</span>
-                            <p>MAY 24 2023</p>
+                            <span>{t('grid_1.item_6.desc')}</span>
+                            <p>{t('grid_1.item_6.date')}</p>
                         </div>
-                        <h2>Tony's chocolonely</h2>
+                        <h2>{t('grid_1.item_6.title')}</h2>
                     </div>
                 </div>
             </div>
 
             <div className='grid_1_down'>
                 <div className='grid_1_down_position'>
-                    <p>Looking to make your mark? We'll help you turn yourr project into a success sotry.</p>
+                    <p>{t('grid_1.down.text')}</p>
                     <span></span>
                 </div>
 
                 <h2>
-                    Ready to bring your <span>ideas</span> to life?<br />
-                    We're <span>here to help</span>
+                    {t('grid_1.down.title.1')} <span>{t('grid_1.down.title.2')}</span> {t('grid_1.down.title.3')}<br />
+                    {t('grid_1.down.title.4')} <span>{t('grid_1.down.title.5')}</span>
                 </h2>
 
                 <Link href={'/contact'} className='grid_1_down_link'>
-                    <p>CONTACT US</p>
+                    <p>{t('grid_1.down.btn')}</p>
                     <FaCircleArrowRight className='grid_1_down_icon' />
                 </Link>
             </div>
