@@ -6,6 +6,7 @@ import Footer from "./components/footer/Footer";
 import FirstLoading from "./components/firstLoading/FirstLoading";
 import SideLabel from "./components/sideLabel/SideLabel";
 import SideLabel2 from "./components/sideLabel2/SideLabel2";
+import I18nProvider from "./I18nProvider";
 
 
 const geistSans = Geist({
@@ -27,13 +28,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
-        <FirstLoading>
-          <SideLabel />
-          <SideLabel2 />
-          <Header />
-          {children}
-          <Footer />
-        </FirstLoading>
+        <I18nProvider>
+          <FirstLoading>
+            <SideLabel />
+            <SideLabel2 />
+            <Header />
+            {children}
+            <Footer />
+          </FirstLoading>
+        </I18nProvider>
       </body>
     </html>
   );

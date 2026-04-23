@@ -1,0 +1,127 @@
+{
+    "menu": {
+        "homepage": "Homepage",
+        "portfolio": "Portfolio",
+        "services": "Services",
+        "newsletter": "Blog",
+        "other": "Other pages",
+        "landing": "Landing page",
+        "personal": "Personal",
+        "portfolio_slider": "Portfolio slider",
+        "grid1": "Grid Type 1",
+        "grid2": "Grid Type 2",
+        "slider": "Slider",
+        "services_list": "Services list",
+        "single_service": "Single service",
+        "blog": "Blog",
+        "publication": "Publication",
+        "team": "Team",
+        "contact": "Contact",
+        "not_found": "404 page"
+    },
+    "home": {
+        "home_1": {
+            "title": {
+                "word_1": "Designing",
+                "word_2": "a Better",
+                "word_3": "Word",
+                "word_4": "Today"
+            },
+            "desc": "Welcome to our world of endless imagination and boundless creativity. Together, let's embark on a remarkable journey where dreams become tangible realities.",
+            "btn_1": "WHAT WE DO",
+            "btn_2": "VIEW WORKS"
+        },
+        "home_2": {
+            "title": {
+                "word_1": "Discover Our",
+                "word_2": "Studio"
+            },
+            "desc": {
+                "desc_1": "At our design studio, we are a collective of talented individuals ignited by our unwavering passion for transforming ideas into reality. With a harmonious blend of diverse backgrounds and a vast array of skill sets, we join forces to create compelling solutions for our esteemed clients.",
+                "desc_2": "Collaboration is at the heart of what we do. Our team thrives on the synergy that arises when unique perspectives converge, fostering an environment of boundless creativity. By harnessing our collective expertise, we produce extraordinary results that consistently surpass expectations."
+            },
+            "img_desc": {
+                "desc_1": "Passionately Creating",
+                "desc_2": "Design Wonders:",
+                "desc_3": "Unleashing",
+                "desc_4": "Boundless Creativity"
+            }
+        },
+        "home_3": {
+            "up_text_1": "Professionals focused on helping your brand",
+            "up_text_2": "grow and move forward.",
+            "title": {
+                "center_1_1": "Unique",
+                "center_1_2": "Ideas",
+                "center_2_1": "For Your",
+                "center_2_2": "Business",
+                "down_1_1": "Branding and",
+                "down_1_2": "Identity Design",
+                "down_2_1": "Website Design",
+                "down_2_2": "and Development",
+                "down_3_1": "Advertising and",
+                "down_3_2": "Marketing Campaigns",
+                "down_4_1": "Creative Consulting ",
+                "down_4_2": "and Development"
+            },
+            "center_btn": "WHAT WE DO",
+            "down_desc": "Our creative agency is a team of professionals focused on helping your brand grow."
+        },
+        "home_4": {
+            "title": {
+                "up_1": "Meet",
+                "up_2": "Our Team"
+            },
+            "desc_1": "We are talented individuals who are passionate about bringing ideas to life. With a diverse range of backgrounds and skill sets, we collaborate to produce effective solutions for our clients.",
+            "desc_2": "Together, our creative team is committed to delivering impactful work that exceeds expectations.",
+            "btn": "READ MORE",
+            "btn_down": {
+                "down_1": "We",
+                "down_2": "delivering",
+                "down_3": "exceptional",
+                "down_4": "results."
+            },
+            "right_desc": "The founders of our agency"
+        },
+        "home_5": {
+            "up_desc_1": "Professionals focused on helping your brand",
+            "up_desc_2": "grow and move forward.",
+            "title": {
+                "1": "Customer",
+                "2": "Voices:",
+                "3": "Hear What",
+                "4": "They Say!"
+            },
+            "team_desc": {
+                "desc_1": {
+                    "name": "Sarah Newman",
+                    "company": "ENVATO MARKET",
+                    "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,"
+                },
+                "desc_2": {
+                    "name": "Emma Trueman",
+                    "company": "ENVATO MARKET",
+                    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen."
+                }
+            }
+        },
+        "home_6": {
+            "title": "Popular Publications:",
+            "up_btn": "VIEW ALL",
+            "box_1": {
+                "category": "TECHNOLOGY",
+                "date": "MAY 24 2023",
+                "title": "How to Become a Graphic Designer in 10 Simple Steps",
+                "desc": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate...",
+                "btn": "READ MORE"
+            },
+             "box_2": {
+                "category": "TECHNOLOGY",
+                "date": "MAY 24 2023",
+                "title": "16 Best Graphic Design Online and Offline Courses",
+                "desc": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate...",
+                "btn": "READ MORE"
+            }
+        }
+    }
+}

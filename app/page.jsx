@@ -15,9 +15,12 @@ import Link from "next/link";
 import Dodechedron from "./components/dodechedron/newBackground";
 import { Home2 } from "./components/dodechedron/newBackground";
 import SideLabel2 from "./components/sideLabel2/SideLabel2";
+import { useTranslation } from "react-i18next";
 
 
 export default function Home() {
+
+  const { t, i18n } = useTranslation()
 
   const section1Ref = useRef(null);
   const team_images = [
@@ -31,8 +34,8 @@ export default function Home() {
   ]
   const [clickedTeamImgId, setClickedTeamImgId] = useState(null);
   const team_desc = [
-    { id: 1, name: 'Sarah Newman', company: 'ENVATO MARKET', desc: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,' },
-    { id: 2, name: 'Emma Trueman', company: 'ENVATO MARKET', desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen.' },
+    { id: 1, name: `${t('home.home_5.team_desc.desc_1.name')}`, company: `${t('home.home_5.team_desc.desc_1.company')}`, desc: `${t('home.home_5.team_desc.desc_1.desc')}` },
+    { id: 2, name: `${t('home.home_5.team_desc.desc_2.name')}`, company: `${t('home.home_5.team_desc.desc_2.company')}`, desc: `${t('home.home_5.team_desc.desc_2.desc')}` },
   ]
 
   const home_5_descRef = useRef(null);
@@ -87,17 +90,17 @@ export default function Home() {
 
       <section ref={section1Ref} id="home_1_section" className="home_1_all home_section">
 
-        <h1>Designing <span>a Better</span>  World <span>Today</span> </h1>
-        <p>Welcome to our world of endless imagination and boundless creativity. Together, let's embark on a remarkable journey where dreams become tangible realities.</p>
+        <h1>{t('home.home_1.title.word_1')} <span>{t('home.home_1.title.word_2')}</span> {t('home.home_1.title.word_3')} <span> {t('home.home_1.title.word_4')}</span> </h1>
+        <p>{t('home.home_1.desc')}</p>
         <div className="home_1_btns_div">
           <div className="home_1_left_btns">
             <Link href={'/services'} className="home_1_left_btn">
-              <div> WHAT WE DO</div>
+              <div>{t('home.home_1.btn_1')}</div>
               <div> <FaCircleArrowRight className="head_arrow_icon" /></div>
             </Link>
 
             <Link href={'/grid-1'} className="home_1_right_btn">
-              <div>VIEW WORKS</div>
+              <div>{t('home.home_1.btn_2')}</div>
               <div> <FaCircleArrowRight className="head_arrow_icon_2" /></div>
             </Link>
           </div>
@@ -127,12 +130,12 @@ export default function Home() {
       </section>
 
       <SideLabel2 section1Ref={section1Ref} />
-      
+
       <section id="home_2_section" className="home_2_all home_section">
         <div className="home_2_left">
-          <h1>Discover <br /> Our <span>Studio</span></h1>
-          <p>At our design studio, we are a collective of talented individuals ignited by our unwavering passion for transforming ideas into reality. With a harmonious blend of diverse backgrounds and a vast array of skill sets, we join forces to create compelling solutions for our esteemed clients.</p>
-          <p>Collaboration is at the heart of what we do. Our team thrives on the synergy that arises when unique perspectives converge, fostering an environment of boundless creativity. By harnessing our collective expertise, we produce extraordinary results that consistently surpass expectations.</p>
+          <h1>{t('home.home_2.title.word_1')}  <span> {t('home.home_2.title.word_2')} </span></h1>
+          <p>{t('home.home_2.desc.desc_1')}</p>
+          <p>{t('home.home_2.desc.desc_2')}</p>
 
           <div className="home_2_left_bottom">
             <div className="home_2_img_container">
@@ -140,7 +143,7 @@ export default function Home() {
               <FaCirclePause className="home_2_pause_icon" />
             </div>
 
-            <h3>Passionately Creating <span>Design Wonders:</span>  Unleashing <span>Boundless Creativity</span> </h3>
+            <h3>{t('home.home_2.img_desc.desc_1')} <span>{t('home.home_2.img_desc.desc_2')}</span>{t('home.home_2.img_desc.desc_3')} <span>{t('home.home_2.img_desc.desc_4')}</span> </h3>
           </div>
         </div>
 
@@ -156,8 +159,8 @@ export default function Home() {
 
         <div className="h_3_up">
           <p>
-            Professionals focused on helping your brand <br />
-            grow and move forward.
+            {t('home.home_3.up_text_1')} <br />
+            {t('home.home_3.up_text_2')}
           </p>
           <span></span>
         </div>
@@ -166,13 +169,13 @@ export default function Home() {
         <div className="home_3_center">
           <div className="h_3_center_item">
             <div className="h_3_img"></div>
-            <h2>Unique <span>Ideas</span> </h2>
+            <h2>{t('home.home_3.title.center_1_1')} <span>{t('home.home_3.title.center_1_2')}</span> </h2>
           </div>
 
           <div className="h_3_center_item">
-            <h2>For Your <span>Business.</span></h2>
+            <h2>{t('home.home_3.title.center_2_1')} <span>{t('home.home_3.title.center_2_2')}</span></h2>
             <button className="home_1_left_btn">
-              <Link href={'/services'}> WHAT WE DO</Link>
+              <Link href={'/services'}>{t('home.home_3.center_btn')}</Link>
               <div> <FaCircleArrowRight className="head_arrow_icon" /></div>
             </button>
           </div>
@@ -183,11 +186,11 @@ export default function Home() {
             <div className="h_3_down_position"></div>
 
             <h3>
-              Branding and <br />
-              Identity Design
+              {t('home.home_3.title.down_1_1')} <br />
+              {t('home.home_3.title.down_1_2')}
             </h3>
 
-            <p>Our creative agency is a team of professionals focused on helping your brand grow.</p>
+            <p>{t('home.home_3.down_desc')}</p>
 
             <div className="h_3_icon_div">
               <BsArrowRightCircleFill className="h_3_d_icon" />
@@ -198,11 +201,11 @@ export default function Home() {
             <div className="h_3_down_position"></div>
 
             <h3>
-              Website Design <br />
-              and Development
+              {t('home.home_3.title.down_2_1')} <br />
+              {t('home.home_3.title.down_2_2')}
             </h3>
 
-            <p>Our creative agency is a team of professionals focused on helping your brand grow.</p>
+            <p>{t('home.home_3.down_desc')}</p>
 
             <div className="h_3_icon_div">
               <BsArrowRightCircleFill className="h_3_d_icon" />
@@ -213,11 +216,11 @@ export default function Home() {
             <div className="h_3_down_position"></div>
 
             <h3>
-              Advertising and <br />
-              Marketing Campaigns
+              {t('home.home_3.title.down_3_1')} <br />
+              {t('home.home_3.title.down_3_2')}
             </h3>
 
-            <p>Our creative agency is a team of professionals focused on helping your brand grow.</p>
+            <p>{t('home.home_3.down_desc')}</p>
 
             <div className="h_3_icon_div">
               <BsArrowRightCircleFill className="h_3_d_icon" />
@@ -228,11 +231,11 @@ export default function Home() {
             <div className="h_3_down_position"></div>
 
             <h3>
-              Creative Consulting <br />
-              and Development
+              {t('home.home_3.title.down_4_1')} <br />
+              {t('home.home_3.title.down_4_2')}
             </h3>
 
-            <p>Our creative agency is a team of professionals focused on helping your brand grow.</p>
+            <p>{t('home.home_3.down_desc')}</p>
 
             <div className="h_3_icon_div">
               <BsArrowRightCircleFill className="h_3_d_icon" />
@@ -243,22 +246,21 @@ export default function Home() {
 
       <section className="home_4_all home_section">
         <div className="home_4_left">
-          <h2>Meet <br />Our Team</h2>
+          <h2>{t('home.home_4.title.up_1')} <br />{t('home.home_4.title.up_2')}</h2>
           <p>
-            We are talented individuals who are passionate about bringing ideas to life. With a diverse range of backgrounds
-            and skill sets, we collaborate to produce effective solutions for our clients.
+            {t('home.home_4.desc_1')}
           </p>
 
           <p>
-            Together, our creative team is committed to delivering impactful work that exceeds expectations.
+            {t('home.home_4.desc_2')}
           </p>
 
           <button>
-            <Link href={'/team'}>READ MORE</Link>
+            <Link href={'/team'}>{t('home.home_4.btn')}</Link>
             <div> <FaCircleArrowRight className="h_4_arrow_icon" /></div>
           </button>
 
-          <p> <span>We</span> delivering <span>exceptional</span> results.</p>
+          <p> <span>{t('home.home_4.btn_down.down_1')}</span> {t('home.home_4.btn_down.down_2')} <span>{t('home.home_4.btn_down.down_3')}</span>{t('home.home_4.btn_down.down_4')}</p>
 
         </div>
 
@@ -285,7 +287,7 @@ export default function Home() {
           </div>
 
           <div className="h_4_right_2">
-            <p><span>*</span> The founders of our agency</p>
+            <p><span>*</span> {t('home.home_4.right_desc')}</p>
             {
               team_cards_2.map((card) => (
                 <div key={card.id} className="h_4_img_div">
@@ -311,15 +313,15 @@ export default function Home() {
       <section className="home_5_all home_section">
         <div className="h_5_up">
           <p>
-            Professionals focused on helping your brand <br />
-            grow and move forward.
+            {t('home.home_5.up_desc_1')} <br />
+            {t('home.home_5.up_desc_2')}
           </p>
           <span></span>
         </div>
 
         <h2>
-          Customer <span>Voices:</span> <br />
-          Hear What <span>They Say!</span>
+          {t('home.home_5.title.1')} <span>{t('home.home_5.title.2')}</span> <br />
+          {t('home.home_5.title.3')} <span>{t('home.home_5.title.4')}</span>
         </h2>
 
         <div className="h_5_team_images">
@@ -359,11 +361,11 @@ export default function Home() {
 
       <section className="home_6_all home_section">
         <div className="h_6_up">
-          <h2>Popular Publications:</h2>
+          <h2> {t('home.home_6.title')}</h2>
 
           <Link href={'/blog'}>
             <button>
-              <p>VIEW ALL</p>
+              <p> {t('home.home_6.up_btn')}</p>
               <div> <FaCircleArrowRight className="h_6_arrow_icon" /></div>
             </button>
           </Link>
@@ -372,28 +374,22 @@ export default function Home() {
         <div className="h_6_down">
           <Link href={'/publication'} className="h_6_down_box">
             <img src="assets/home_6_1.jpg" alt="" width={'100%'} height={300} />
-            <p className="h_6_p1"><span>TECHNOLOGY</span> MAY 24 2023</p>
-            <h2>How to Become a Graphic Designer in 10 Simple Steps</h2>
-            <p className="h_6_p2">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae,
-              eos necessitatibus nisi. Nam cupiditate...
-            </p>
+            <p className="h_6_p1"><span> {t('home.home_6.box_1.category')}</span> {t('home.home_6.box_1.date')}</p>
+            <h2>{t('home.home_6.box_1.title')}</h2>
+            <p className="h_6_p2">{t('home.home_6.box_1.desc')}</p>
             <button>
-              <p>READ MORE</p>
+              <p>{t('home.home_6.box_1.btn')}</p>
               <div> <FaCircleArrowRight className="h_6_arrow_icon" /></div>
             </button>
           </Link>
 
           <Link href={'/publication'} className="h_6_down_box">
             <img src="assets/home_6_2.jpg" alt="" width={'100%'} height={300} />
-            <p className="h_6_p1"><span>TECHNOLOGY</span> MAY 24 2023</p>
-            <h2>16 Best Graphic Design Online and Offline Courses</h2>
-            <p className="h_6_p2">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae,
-              eos necessitatibus nisi. Nam cupiditate...
-            </p>
+            <p className="h_6_p1"><span>{t('home.home_6.box_2.category')}</span> {t('home.home_6.box_2.date')}</p>
+            <h2>{t('home.home_6.box_2.title')}</h2>
+            <p className="h_6_p2">{t('home.home_6.box_2.desc')}</p>
             <button>
-              <p>READ MORE</p>
+              <p>{t('home.home_6.box_2.btn')}</p>
               <div> <FaCircleArrowRight className="h_6_arrow_icon" /></div>
             </button>
           </Link>

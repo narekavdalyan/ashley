@@ -35,6 +35,19 @@
 .header_all .header_menu_logo {
     font-size: 40px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        button {
+            cursor: pointer;
+        }
+    }
 }
 
 
@@ -124,6 +137,11 @@
 
 .header_all ul {
     line-height: 2;
+}
+
+.header_up header {
+    width: fit-content;
+    text-align: right;
 }
 
 /* ANIMATIONS */
